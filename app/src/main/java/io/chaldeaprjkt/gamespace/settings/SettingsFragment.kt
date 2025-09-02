@@ -1,6 +1,6 @@
 /*
  * Copyright (C) 2021 Chaldeaprjkt
- *               2022 crDroid Android Project
+ * Copyright (C) 2022-2025 crDroid Android Project
  *               2023-2024 the risingOS Android Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -26,15 +26,18 @@ import android.view.View
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.preference.Preference
 import androidx.preference.PreferenceCategory
-import androidx.preference.PreferenceFragmentCompat
+
+import com.android.settingslib.widget.SettingsBasePreferenceFragment
+
 import dagger.hilt.android.AndroidEntryPoint
+
 import io.chaldeaprjkt.gamespace.R
 import io.chaldeaprjkt.gamespace.preferences.AppListPreferences
 import io.chaldeaprjkt.gamespace.preferences.appselector.AppSelectorActivity
 import io.chaldeaprjkt.gamespace.preferences.QuickStartAppPreference
 import io.chaldeaprjkt.gamespace.preferences.QuickStartAppPreferenceDialogFragment
 
-@AndroidEntryPoint(PreferenceFragmentCompat::class)
+@AndroidEntryPoint(SettingsBasePreferenceFragment::class)
 class SettingsFragment : Hilt_SettingsFragment() {
 
     private var apps: AppListPreferences? = null
